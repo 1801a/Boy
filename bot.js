@@ -45,10 +45,11 @@ if (message.content.startsWith(prefix + 'help')) {
    『✠ -say =====> The Bot Say Any Thing | تكرار اي شي كتبتو』
    『✠ -image ===> To Show Image Of Server | لاضهار صورة السيرفر』
    『✠ -contact => To Contact Owners Bot | مراسلة صاحب البوت』
-   『✠ -invite \ -inv => Invite Bot | لدعوة البوت』
+   『✠ -inv => Invite Bot | لدعوة البوت』
    『✠ -embed ===> To Embed | لتكرار اي شي كتبتو بطريقة حلوة』
    『✠ -avatar ==> Your Avatar | صورتك الشخصية』
    『✠ -support => Server Support | سيرفر الدعم』 
+   『✠ -invites => Invite Member | كام دخلت اشخاص』
      ─════════════════════════════─
       React With ▶ To See Admins Commands`,
 	`─═══════ {✯🔧  Admin Commands - اوامر ادارية 🔧✯} ═══════─
@@ -143,6 +144,18 @@ if (message.content.startsWith(prefix + 'help')) {
     })
     }
 });
+
+client.on('message', message => {
+   if(message.content.startsWith("-invites")) {
+    message.guild.fetchInvites().then(invs => {
+      let user = message.mentions.users.first() || message.author
+      let personalInvites = invs.filter(i => i.inviter.id === user.id);
+      let inviteCount = personalInvites.reduce((p, v) => v.uses + p, 0);
+message.channel.send(`${user} has **${inviteCount}** invites.`);
+});
+  }
+});
+
 
 client.on('message' , message => {
   var prefix = "-";
