@@ -146,7 +146,6 @@ if (message.content.startsWith(prefix + 'help')) {
 
 client.on('guildCreate', guild => {
    
-  client.channels.get("513765869088800779")
 const embed = new Discord.RichEmbed()
    .setAuthor(`بوتك دخل سيرفر جديد مبروك ✅`)
    .setDescription(`**
@@ -157,12 +156,11 @@ Member Count: __${guild.memberCount}__
 Servers Counter : __${client.guilds.size}__**`)
          .setColor("#f3ae10")
          .addField("New Server!")
-         .setFooter('JoyBOT' , client.user.avatarURL)
-           client.channels.get("513765869088800779").send({embed}); 
+         .setFooter('Heem Bot' , client.user.avatarURL)
+           client.channels.get("513765869088800779") //Superme©
 }
  
 );
-
 
 client.on('message' , message => {
   var prefix = "-";
