@@ -443,13 +443,7 @@ client.channels.get("513765869088800779").sendEmbed(embed)
  
 client.on('message', msg => {
   if (msg.content === '#vp') {
-    msg.reply('كتب اسمك');
-  }
-});
-
-client.on('message', msg => {
-  if (msg.content === '#free') {
-    msg.reply('انتظر 10 دقايق لوصل فيبوكس');
+    msg.reply('خلاص يا خول الفيبوكس خلص');
   }
 });
 
