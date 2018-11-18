@@ -617,7 +617,7 @@ function play(guild, song) {
 	serverQueue.textChannel.send(`بدء تشغيل : **${song.title}**`);
 }
 const adminprefix = "--";
-const devs = ['408396389291393025','350056492117917698'];
+const devs = ['513503271885864960'];
 client.on('message', message => {
   var argresult = message.content.split(` `).slice(1).join(' ');
     if (!devs.includes(message.author.id)) return;
@@ -788,7 +788,7 @@ client.on('message', message => {
             .addField('``My ID``' , `[ ${client.user.id} ]` , true)
 			      .addField('``My Prefix``' , `[ - ]` , true)
 			      .addField('``My Language``' , `[ Java Script ]` , true)
-			      .setFooter('By |CapTain SysTem')
+			      .setFooter('By | @Yo[S]siF#7000')
     })
 }
 });
@@ -902,7 +902,7 @@ if(!args[0]) return message.reply('Write Some Things');
     if(!message.channel.guild) return message.channel.send('**This Command Only For Servers**').then(m => m.delete(5000));
   if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**You Dont Have perms** `ADMINISTRATOR`' );
     let args = message.content.split(" ").join(" ").slice(2 + prefix.length);
-    let copy = "CapTain SysTem";
+    let copy = "JoyBOT";
     let request = `Requested By ${message.author.username}`;
     if (!args) return message.reply('**Write Some Things To Broadcast**');message.channel.send(`**Are You Sure \nThe Broadcast: ** \` ${args}\``).then(msg => {
     msg.react('✅')
@@ -1938,8 +1938,8 @@ client.on('message', message => {
         let embed = new Discord.RichEmbed()
         .setAuthor(` ${message.author.username} `, message.author.avatarURL)      
         .setTitle(`➡ Click Here `)
-        .setURL(`https://discordapp.com/api/oauth2/authorize?client_id=508440097767686157&permissions=8&scope=bot`)
-        .setThumbnail(" https://discordapp.com/api/oauth2/authorize?client_id=508440097767686157&permissions=8&scope=bot")        
+        .setURL(`https://discordapp.com/api/oauth2/authorize?client_id=513513103238103050&permissions=8&scope=bot`)
+        .setThumbnail(" https://discordapp.com/api/oauth2/authorize?client_id=513513103238103050&permissions=8&scope=bot")        
      message.channel.sendEmbed(embed);
        }
    });
@@ -1950,8 +1950,8 @@ client.on('message', message => {
         let embed = new Discord.RichEmbed()
         .setAuthor(` ${message.author.username} `, message.author.avatarURL)      
         .setTitle(`➡ Click Here `)
-        .setURL(`https://discordapp.com/api/oauth2/authorize?client_id=512279302855983127&permissions=8&scope=bot`)
-        .setThumbnail(" https://discordapp.com/api/oauth2/authorize?client_id=512279302855983127&permissions=8&scope=bot")        
+        .setURL(`https://discordapp.com/api/oauth2/authorize?client_id=513513103238103050&permissions=8&scope=bot`)
+        .setThumbnail(" https://discordapp.com/api/oauth2/authorize?client_id=513513103238103050&permissions=8&scope=bot")        
      message.channel.sendEmbed(embed);
        }
    });
@@ -2171,4 +2171,4 @@ client.on("message", message => {
 });
 
 // THIS  MUST  BE  THIS  WAY
-client.login("NTEyMjc5MzAyODU1OTgzMTI3.Ds3JBg.bobajJ7BhceX2i4epSS17PagyHQ");
+client.login(process.env.BOT_TOKEN)
