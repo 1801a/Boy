@@ -157,6 +157,11 @@ message.channel.send(`${user} has **${inviteCount}** invites.`);
 });
 
 
+client.on('ready', () => {
+var x = client.channels.get("512404444596535316");
+if (x) x.join();
+});
+
 client.on('message' , message => {
   var prefix = "-";
   if(message.author.bot) return;
