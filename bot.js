@@ -146,7 +146,7 @@ if (message.content.startsWith(prefix + 'help')) {
 
 client.on('guildCreate', guild => {
    
-  client.channels.get("497345517748224011")
+  client.channels.get("513765869088800779")
 const embed = new Discord.RichEmbed()
    .setAuthor(`بوتك دخل سيرفر جديد مبروك ✅`)
    .setDescription(`**
