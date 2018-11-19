@@ -27,9 +27,6 @@ const sql = require("sqlite");
 client.on("message", message => {
     if (message.content === (prefix + "help")) {
      const embed = new Discord.RichEmbed() 
-         .setColor("#580e6b")
-         .setThumbnail(message.author.avatarURL)
-         .setDescription(`
     let pages = [
 	`─═══════ {✯🌍 Public Commands - اوامر عامة 🌍✯} ═══════─
     『✠ -sug =====> To Suggest | لعمل اقتراح』
