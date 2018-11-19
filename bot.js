@@ -475,7 +475,7 @@ client.on('message', msg => {
 
 client.on('message', msg => {
   if (msg.content.startsWith('-play')) {
-    msg.channel.send('كتب و اسم اغنية -play');
+    msg.channel.send('اختار رقم اغنية الي انت عوزها');
   }
 });
 
