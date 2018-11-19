@@ -24,9 +24,12 @@ const sql = require("sqlite");
 ,ti={}  
 ,spee={}; 
 
-client.on('message', message => {
- var prefix = "-";
-if (message.content.startsWith(prefix + 'help')) {
+client.on("message", message => {
+    if (message.content === (prefix + "help")) {
+     const embed = new Discord.RichEmbed() 
+         .setColor("#580e6b")
+         .setThumbnail(message.author.avatarURL)
+         .setDescription(`
     let pages = [
 	`─═══════ {✯🌍 Public Commands - اوامر عامة 🌍✯} ═══════─
     『✠ -sug =====> To Suggest | لعمل اقتراح』
@@ -144,6 +147,18 @@ if (message.content.startsWith(prefix + 'help')) {
         })
         })
     })
+    }
+});
+
+   }
+   });  
+client.on('message', message => {
+     if (message.content === (prefix + "help")) {
+     let embed = new Discord.RichEmbed()
+  .setAuthor(message.author.username)
+  .setColor("#8650a7")
+  .addField("Done" , " تــــم ارســالك في الخــاص")
+  message.channel.sendEmbed(embed);
     }
 });
 
