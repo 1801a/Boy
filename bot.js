@@ -509,12 +509,12 @@ client.channels.get("513765869088800779").sendEmbed(embed)
 });
  
 client.on('message', msg => {
-  if (msg.content === 'هلا ولله') {
+  if (msg.content === 'هلا والله') {
     msg.reply('هلا فيك');	
   }
 });
 
-const prefix = ">"
+const prefix = "-"
 client.on('message', async msg => { 
 	if (msg.author.bot) return undefined;
 	if (!msg.content.startsWith(prefix)) return undefined;
@@ -561,7 +561,7 @@ client.on('message', async msg => {
 			        .setDescription(`**الرجاء اختيار رقم المقطع** :
 ${videos.map(video2 => `[**${++index} **] \`${video2.title}\``).join('\n')}`)
 
-					.setFooter("Speed Bot")
+					.setFooter("JoyBOT")
 					msg.channel.sendEmbed(embed1).then(message =>{message.delete(20000)})
 					
 					try {
