@@ -78,6 +78,7 @@ if (message.content.startsWith(prefix + 'help')) {
    『✤ -kv @user => Voice Kick | يطرد شخص من الرووم』
    『✤ -vonline => Create Channel Voice Online | يسوي رووم فويس اونلاين』
      ─════════════════════════════─
+      ✴ Create Channel ***welcome*** To Enable The Welcome 
       ✴ Create Channel **suggestion** To Enable Command -sug
       ✴ Create Channel **log** TO Enable LOG
      ─════════════════════════════─
@@ -203,7 +204,7 @@ client.on('guildMemberAdd', member => {
                       
                                      .addField(' الـسيرفر', `${member.guild.name}`,true)
                                        
-     .setFooter("**JoyBOT**")
+     .setFooter("JoyBOT")
         .setTimestamp()
     
       channel.sendEmbed(embed);
