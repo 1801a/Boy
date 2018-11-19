@@ -157,6 +157,47 @@ message.channel.send(`${user} has **${inviteCount}** invites.`);
 });
 
 
+
+client.on('message',message =>{
+    var prefix = "-";
+    if(message.content.startsWith(prefix + 'top')) {
+  message.guild.fetchInvites().then(i =>{
+  var invites = [];
+   
+  i.forEach(inv =>{
+    var [invs,i]=[{},null];
+     
+    if(inv.maxUses){
+        invs[inv.code] =+ inv.uses+"/"+inv.maxUses;
+    }else{
+        invs[inv.code] =+ inv.uses;
+    }
+        invites.push(`invite: ${inv.url} inviter: ${inv.inviter} \`${invs[inv.code]}\`;`);
+   
+  });
+  var embed = new Discord.RichEmbed()
+  .setColor("#000000")
+  .setDescription(`${invites.join(`\n`)+'\n\n**By:** '+message.author}`)
+  .setThumbnail("https://cdn.discordapp.com/avatars/513513103238103050/b79e77fc0fd65ba9779bf1e6187b20dd.png?size=2048")
+           message.channel.send({ embed: embed });
+   
+  });
+   
+    }
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
 client.on('message' , message => {
   var prefix = "-";
   if(message.author.bot) return;
