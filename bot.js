@@ -190,7 +190,14 @@ client.on('message',message =>{
 
 
 
-
+client.on('ready', () => {
+  console.log(`-------------------------------
+  [Start] ${new Date()}`);
+  console.log(`[INFO] [Bot Name : ${client.user.username}. ]`)
+  console.log(`[BOT] By : JoyBOT
+  -------------------------------`)
+    bot.user.setActivity("-help | ${client.guilds.size} Server.", {type: "WATCHING"})
+  });
 
 
 
