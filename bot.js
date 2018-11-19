@@ -50,6 +50,7 @@ if (message.content.startsWith(prefix + 'help')) {
    『✠ -avatar ==> Your Avatar | صورتك الشخصية』
    『✠ -support => Server Support | سيرفر الدعم』 
    『✠ -invites => Invite Member | كام دخلت اشخاص』
+   『✠ -top => Top Invites Member | أعلى دعوات』
      ─════════════════════════════─
       React With ▶ To See Admins Commands`,
 	`─═══════ {✯🔧  Admin Commands - اوامر ادارية 🔧✯} ═══════─
