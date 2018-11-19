@@ -79,7 +79,7 @@ if (message.content.startsWith(prefix + 'help')) {
    『✤ -vonline => Create Channel Voice Online | يسوي رووم فويس اونلاين』
      ─════════════════════════════─
       ✴ Create Channel **suggestion** To Enable Command -sug
-      ✴ Create Channel *log* TO Enable LOG
+      ✴ Create Channel **log** TO Enable LOG
      ─════════════════════════════─
       React With ▶ To See Games Commands`,
 	`=-=─═══════ {✯🎯  Games Commands - اوامر الالعاب 🎯✯} ═══════─
