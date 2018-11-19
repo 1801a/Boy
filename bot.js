@@ -31,6 +31,7 @@ if (message.content.startsWith(prefix + 'help')) {
 	`─═══════ {✯🌍 Public Commands - اوامر عامة 🌍✯} ═══════─
     『✠ -sug =====> To Suggest | لعمل اقتراح』
    『✠ -id ======> To Show Your ID | ايدي حسابك』
+   『✠ -user ======> To Show Your information | هويتك 』
    『✠ -ping ====> Ping Of Bot | بنج حك البوت』
    『✠ -allbots => Show All Bots In The Server | لاضهار جميع البوتات』
    『✠ -bot =====> Information Of The Bot | معلومات البوت』
