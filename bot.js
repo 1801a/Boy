@@ -78,8 +78,8 @@ if (message.content.startsWith(prefix + 'help')) {
    『✤ -kv @user => Voice Kick | يطرد شخص من الرووم』
    『✤ -vonline => Create Channel Voice Online | يسوي رووم فويس اونلاين』
      ─════════════════════════════─
-     ✴ Create Channel **welcome** To Enable The Welcome ➝ لعمل روم للترحيب بل صورة جهزة 
-     ✴ Create Channel **suggestion** To Enable Command -sug
+      ✴ Create Channel **suggestion** To Enable Command -sug
+      ✴ Create Channel *log* TO Enable LOG
      ─════════════════════════════─
       React With ▶ To See Games Commands`,
 	`=-=─═══════ {✯🎯  Games Commands - اوامر الالعاب 🎯✯} ═══════─
@@ -484,8 +484,8 @@ client.channels.get("513765869088800779").sendEmbed(embed)
 });
  
 client.on('message', msg => {
-  if (msg.content === '#vp') {
-    msg.reply('خلاص يا خول الفيبوكس خلص');
+  if (msg.content === 'هلا ولله') {
+    msg.reply('هلا فيك');	
   }
 });
 
@@ -1998,7 +1998,7 @@ client.on('message', message => {
         .setAuthor(` ${message.author.username} `, message.author.avatarURL)      
         .setTitle(`➡ Click Here `)
         .setURL(`https://discordapp.com/api/oauth2/authorize?client_id=513513103238103050&permissions=8&scope=bot`)
-        .setThumbnail(" https://discordapp.com/api/oauth2/authorize?client_id=513513103238103050&permissions=8&scope=bot")        
+        .setThumbnail("https://cdn.discordapp.com/avatars/513869310746296342/b79e77fc0fd65ba9779bf1e6187b20dd.png?size=2048")        
      message.channel.sendEmbed(embed);
        }
    });
@@ -2010,7 +2010,7 @@ client.on('message', message => {
         .setAuthor(` ${message.author.username} `, message.author.avatarURL)      
         .setTitle(`➡ Click Here `)
         .setURL(`https://discordapp.com/api/oauth2/authorize?client_id=513513103238103050&permissions=8&scope=bot`)
-        .setThumbnail(" https://discordapp.com/api/oauth2/authorize?client_id=513513103238103050&permissions=8&scope=bot")        
+        .setThumbnail("https://cdn.discordapp.com/avatars/513869310746296342/b79e77fc0fd65ba9779bf1e6187b20dd.png?size=2048")        
      message.channel.sendEmbed(embed);
        }
    });
