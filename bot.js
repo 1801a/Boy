@@ -22,9 +22,9 @@ const sql = require("sqlite");
  const dateFormat = require('dateformat'); 
  const pretty = require('pretty-ms') 
 
- client.on("message", message => {
-     var prefix = "-";
-    if (message.content === (prefix + "help")) {
+client.on('message', message => {
+ var prefix = "-";
+if (message.content.startsWith(prefix + 'help')) {
      const embed = new Discord.RichEmbed() 
          .setColor("#580e6b")
          .setThumbnail(message.author.avatarURL)
