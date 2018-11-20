@@ -275,7 +275,7 @@ client.on('ready', () => {
   console.log(`[INFO] [Bot Name : ${client.user.username}. ]`)
   console.log(`[BOT] By : JoyBOT
   -------------------------------`)
-    client.user.setActivity(`-help | ${client.guilds.size} Server.`)
+    client.user.setActivity(`-help |-inv | ${client.guilds.size} Server.`)
   });
 
 
