@@ -1657,7 +1657,7 @@ if(!message.guild.member(client.user).hasPermission("MANAGE_MESSAGES")) return m
 client.on('guildCreate', guild => {
   var embed = new Discord.RichEmbed()
   .setColor(0x5500ff)
-  .setDescription(`**Thank You For Adding The Bot To Your Server If You Need Any Help In The Bot Go To Suuport Server** https://discord.gg/rnSygrZ`)
+  .setDescription(`**شكرا لإضافة بوت إلى سيرفرك الخاص بك إذا كنت بحاجة إلى أي مساعدة في قارب الذهاب إلى سيرفر الدعم** https://discord.gg/3w8GTyz`)
       guild.owner.send(embed)
 });
 
