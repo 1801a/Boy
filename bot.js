@@ -25,14 +25,9 @@ const sql = require("sqlite");
 client.on('message', message => {
  var prefix = "-";
 if (message.content.startsWith(prefix + 'help')) {
-     const embed = new Discord.RichEmbed() 
-         .setColor("#580e6b")
-         .setThumbnail(message.author.avatarURL)
-         .setDescription(`
-   **
-      ─═══════ {✯🌍 Public Commands - اوامر عامة 🌍✯} ═══════─
-   **
-   『✠ -sug =====> To Suggest | لعمل اقتراح』
+    let pages = [
+	`─═══════ {✯🌍 Public Commands - اوامر عامة 🌍✯} ═══════─
+    『✠ -sug =====> To Suggest | لعمل اقتراح』
    『✠ -id ======> To Show Your ID | ايدي حسابك』
    『✠ -user ======> To Show Your information | هويتك 』
    『✠ -ping ====> Ping Of Bot | بنج حك البوت』
@@ -55,10 +50,9 @@ if (message.content.startsWith(prefix + 'help')) {
    『✠ -support => Server Support | سيرفر الدعم』 
    『✠ -invites => Invite Member | كام دخلت اشخاص』
    『✠ -top => Top Invites Member | أعلى دعوات』
-       ─════════════════════════════─
-**
-      ─═══════ {✯🔧  Admin Commands - اوامر ادارية 🔧✯} ═══════─
-  **
+     ─════════════════════════════─
+      React With ▶ To See Admins Commands`,
+	`─═══════ {✯🔧  Admin Commands - اوامر ادارية 🔧✯} ═══════─
    『✤ -move @user => Move User To Your Room Voice | لسحب الشخص الى روومك』
    『✤ -mvall => Move All To Your Room Voice | لسحب الجميع الي روومك』
    『✤ -bc => Broadcast | رسالة جماعية الى كل اعضاء السيرفر』
@@ -87,9 +81,8 @@ if (message.content.startsWith(prefix + 'help')) {
       ✴ Create Channel **suggestion** To Enable Command -sug
       ✴ Create Channel **log** TO Enable LOG
      ─════════════════════════════─
-   **
-   ─═══════ {✯🎯  Games Commands - اوامر الالعاب 🎯✯} ═══════─
-    **       
+      React With ▶ To See Games Commands`,
+	`=-=─═══════ {✯🎯  Games Commands - اوامر الالعاب 🎯✯} ═══════─
    『💠 -xo @user => Game XO | لعب اكس او』
    『💠 -rps => Rock & Paper & Scissors | لعبة حجر ورقة مقص』
    『💠 -slots => Game Of Fruits | لعبة الفواكه』
@@ -100,9 +93,8 @@ if (message.content.startsWith(prefix + 'help')) {
    『💠 -البوت يعطيك نصائح <= هل تعلم』
       قريييب نضيف بعض الالعاب واذا تبون اي لعبة تعالو سيرفر المساعدة
     ─════════════════════════════─
-   **
-      ─═══════ {✯🎯  Music Commands - اوامر الموسيقى 🎯✯} ═══════─
-    **
+      React With ▶ To See Music Commands`,
+	`─═══════ {✯🎯  Music Commands - اوامر الموسيقى 🎯✯} ═══════─
     『❖ -play => لتشغيل أغنية برآبط أو بأسم』
     『❖ -skip => لتجآوز الأغنية الحآلية』
     『❖ -pause => إيقآف الأغنية مؤقتا』
@@ -111,22 +103,47 @@ if (message.content.startsWith(prefix + 'help')) {
     『❖ -stop => لإخرآج البوت من الروم』
     『❖ -np => لمعرفة الأغنية المشغلة حآليا』
     『❖ -queue => لمعرفة قآئمة التشغيل』
-     Soon And I Will Translate The Command To Englih
-   `)
-   message.author.sendEmbed(embed)
-   
-   }
-   });  
-client.on('message', message => {
-     if (message.content === (prefix + "help")) {
-     let embed = new Discord.RichEmbed()
-  .setAuthor(message.author.username)
-  .setColor("#8650a7")
-  .addField("Done" , " تــــم ارســالك في الخــاص")
-  message.channel.sendEmbed(embed);
+	Soon And I Will Translate The Command To Englih`]
+	let page = 1;
+
+    let embed = new Discord.RichEmbed()
+    .setColor('RANDOM')
+    .setFooter(`Page ${page} of ${pages.length}`)
+    .setDescription(pages[page-1])
+
+    message.channel.sendEmbed(embed).then(msg => {
+
+        msg.react('◀').then( r => {
+            msg.react('▶')
+
+
+        const backwardsFilter = (reaction, user) => reaction.emoji.name === '◀' && user.id === message.author.id;
+        const forwardsFilter = (reaction, user) => reaction.emoji.name === '▶' && user.id === message.author.id;
+
+
+        const backwards = msg.createReactionCollector(backwardsFilter, { time: 20000});
+        const forwards = msg.createReactionCollector(forwardsFilter, { time: 20000});
+
+
+
+        backwards.on('collect', r => {
+            if (page === 1) return;
+            page--;
+            embed.setDescription(pages[page-1]);
+            embed.setFooter(`Page ${page} of ${pages.length}`);
+            msg.edit(embed)
+        })
+        forwards.on('collect', r => {
+            if (page === pages.length) return;
+            page++;
+            embed.setDescription(pages[page-1]);
+            embed.setFooter(`Page ${page} of ${pages.length}`);
+            msg.edit(embed)
+        })
+        })
+    })
     }
 });
-
 
 
 client.on('message',message =>{
