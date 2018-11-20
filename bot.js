@@ -1033,34 +1033,19 @@ if(!args[0]) return message.reply('Write Some Things');
 });
 
 
+client.on("message", message => {
+    if (message.content.startsWith("-bc")) {
+                 if (!message.member.hasPermission("ADMINISTRATOR"))  return;
+  let args = message.content.split(" ").slice(1);
+  var argresult = args.join(' ');
+  message.guild.members.filter(m => m.presence.status !== 'all').forEach(m => {
+  m.send(`${argresult}\n ${m}`);
+  })
+  message.channel.send(`\`${message.guild.members.filter( m => m.presence.status !== 'all').size}\`:mailbox:  عدد المستلمين `);
+  message.delete();
+  };
+  });
 
-client.on ('message'، message => {
-    var prefix = "-"؛
-   
-        إذا عاد (message.author.id === client.user.id)؛
-        if (message.guild) {
-       دعونا تضمين = جديد Discord.RichEmbed ()
-        دع args = message.content.split ('') .slice (1) .join ('')؛
-    if (message.content.split ('') [0] == prefix + 'bc') {
-        إذا (! args [1]) {
-    message.channel.send ("* bc <message>")؛
-    إرجاع؛
-    }
-            message.guild.members.forEach (m => {
-       if (! message.member.hasPermission ('ADMINISTRATOR')) return؛
-                var bc = new Discord.RichEmbed ()
-                .addField ('»السيرفر:' ،` $ {message.guild.name} `)
-                .addField ('»المرسل:'،` $ {message.author.username} # $ {message.author.discriminator} `)
-                .addField ('»الرسالة:' ، args)
-                .setColor ( '# FF0000')
-                // m.send (`[$ {m}]`)؛
-                m.send (`$ {m}`، {embed: bc})؛
-            })؛
-        }
-        } آخر {
-            إرجاع؛
-        }
-    })؛
 
 let points = {};
 const type = [
