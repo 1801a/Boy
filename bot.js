@@ -21,15 +21,15 @@ const youtube = new YouTube("AIzaSyAdORXg7UZUo7sePv97JyoDqtQVi3Ll0b8");
 const sql = require("sqlite");
  const dateFormat = require('dateformat'); 
  const pretty = require('pretty-ms') 
- var prefix = "-"
- 
+
  client.on("message", message => {
+     var prefix = "-";
     if (message.content === (prefix + "help")) {
      const embed = new Discord.RichEmbed() 
          .setColor("#580e6b")
          .setThumbnail(message.author.avatarURL)
          .setDescription(`
-   
+   **
       ─═══════ {✯🌍 Public Commands - اوامر عامة 🌍✯} ═══════─
    **
    『✠ -sug =====> To Suggest | لعمل اقتراح』
