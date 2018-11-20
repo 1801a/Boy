@@ -252,8 +252,7 @@ client.on('message', function(message) {
         if(message.content.includes('discord.gg')){
         message.reply (' ')
            if(!message.channel.guild) return message.reply('** This command only for servers**');
-     message.member.addRole(message.guild.roles.find('name', 'Muted')); 
-    const embed500 = new Discord.RichEmbed()
+	let muteRole = message.guild.roles.find("name", "Muted");  
       .setTitle(":x: | تمت معاقبتك")
             .addField(`** لقد قمت بمخالفة قوانين السيرفر من خلال نشر سيرفرات اخرى  **` , `**ملاحظة  : إن كآن هذآ الميوت عن طريق الخطأ تكلم مع الادآرة**`)
       .addField(`by`,`JoyBOT`)
