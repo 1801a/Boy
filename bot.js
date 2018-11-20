@@ -57,7 +57,6 @@ if (message.content.startsWith(prefix + 'help')) {
 	`─═══════ {✯🔧  Admin Commands - اوامر ادارية 🔧✯} ═══════─
    『✤ -move @user => Move User To Your Room Voice | لسحب الشخص الى روومك』
    『✤ -mvall => Move All To Your Room Voice | لسحب الجميع الي روومك』
-   『✤ -bc => Broadcast | رسالة جماعية الى كل اعضاء السيرفر』
    『✤ -role @user <rank> => Give User Rank | لأعطاء رتبة لعضو معين』
    『✤ -roleremove @user <rank> => remove Rank From User | لازالة الرتبة من شخص معين』
    『✤ -role all <rank> => Give All Rank | لأعطاء رتبة للجميع』
