@@ -2071,29 +2071,19 @@ client.on('message', message => {
 });
 
 
-client.on('message', message => {
-        if (message.content === "-invite") {
-            if(!message.channel.guild) return;
-        let embed = new Discord.RichEmbed()
-        .setAuthor(` ${message.author.username} `, message.author.avatarURL)      
-        .setTitle(`➡ Click Here `)
-        .setURL(`https://discordapp.com/api/oauth2/authorize?client_id=513513103238103050&permissions=8&scope=bot`)
-        .setThumbnail("https://cdn.discordapp.com/avatars/513869310746296342/b79e77fc0fd65ba9779bf1e6187b20dd.png?size=2048")        
-     message.channel.sendEmbed(embed);
-       }
-   });
    
-   client.on('message', message => {
-        if (message.content === "-inv") {
-            if(!message.channel.guild) return;
-        let embed = new Discord.RichEmbed()
-        .setAuthor(` ${message.author.username} `, message.author.avatarURL)      
-        .setTitle(`➡ Click Here `)
-        .setURL(`https://discordapp.com/api/oauth2/authorize?client_id=513513103238103050&permissions=8&scope=bot`)
-        .setThumbnail("https://cdn.discordapp.com/avatars/513869310746296342/b79e77fc0fd65ba9779bf1e6187b20dd.png?size=2048")        
-     message.channel.sendEmbed(embed);
-       }
-   });
+client.on('message', message => {
+  if(message.content.startsWith(`${prefix}inv`)){
+    var embed = new Discord.RichEmbed()
+    .setTitle(">> ClickHere To Add" + `${client.user.username}` + " <<")
+    .setURL("https://discordapp.com/oauth2/authorize?client_id=" + `${client.user.id}` + "&scope=bot&permissions=2080374975")
+    .setTimestamp()
+    .setFooter(`Requested By | ${message.author.username}`)
+    .setColor("RANDOM")
+    message.channel.send(`:white_check_mark: I've DMed you with my invite link`)
+    message.author.send({embed})
+  }
+});
  
 client.on('message', message => {
     if (message.content.startsWith("-avatar")) {
