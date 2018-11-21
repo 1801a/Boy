@@ -75,7 +75,7 @@ client.on("message", message => {
    『✠ -top => Top Invites Member | أعلى دعوات』
      ─════════════════════════════─
       ✠ **-setrooms** ** يسويلك روم صوتي ويقلك كم التاريخ **	`)
-   message.author.sendEmbed(embed)
+   message.channel.sendEmbed(embed)
     
    }
    }); 
