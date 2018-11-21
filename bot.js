@@ -82,7 +82,7 @@ client.on("message", message => {
   
   client.on('message', message => {
      if (message.content === ("-help1")) {
-	 message.reply("**تم ارسالك في الخاص** :mailbox_with_mail:")
+	 message.reply("**لا اله الا الله**")
     }
 });
 
@@ -120,14 +120,14 @@ client.on("message", message => {
       ✴ Create Channel **suggestion** To Enable Command -sug
       ✴ Create Channel **log** TO Enable LOG
      ─════════════════════════════─`)
-   message.author.sendEmbed(embed)
+   message.channel.sendEmbed(embed)
     
    }
    }); 
   
   client.on('message', message => {
      if (message.content === ("-help2")) {
-	 message.reply("**تم ارسالك في الخاص** :mailbox_with_mail:")
+	 message.reply("**لا اله الا الله**")
     }
 });
 
@@ -147,14 +147,14 @@ client.on("message", message => {
    『💠 -البوت يعطيك نصائح <= هل تعلم』
       قريييب نضيف بعض الالعاب واذا تبون اي لعبة تعالو سيرفر المساعدة
     ─════════════════════════════─`)
-   message.author.sendEmbed(embed)
+   message.channel.sendEmbed(embed)
     
    }
    }); 
   
   client.on('message', message => {
      if (message.content === ("-help3")) {
-	 message.reply("**تم ارسالك في الخاص** :mailbox_with_mail:")
+	 message.reply("**لا اله الا الله**")
     }
 });
 
@@ -173,14 +173,14 @@ client.on("message", message => {
     『❖ -np => لمعرفة الأغنية المشغلة حآليا』
     『❖ -queue => لمعرفة قآئمة التشغيل』
 	Soon And I Will Translate The Command To Englih`)
-   message.author.sendEmbed(embed)
+   message.channel.sendEmbed(embed)
     
    }
    }); 
   
   client.on('message', message => {
      if (message.content === ("-help4")) {
-	 message.reply("**تم ارسالك في الخاص** :mailbox_with_mail:")
+	 message.reply("**لا اله الا الله**")
     }
 });
 
