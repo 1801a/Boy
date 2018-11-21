@@ -54,6 +54,7 @@ if (message.content.startsWith(prefix + 'help')) {
    『✠ -invites => Invite Member | كام دخلت اشخاص』
    『✠ -top => Top Invites Member | أعلى دعوات』
      ─════════════════════════════─
+      ✠ **-setrooms** ** يسويلك روم صوتي ويقلك كم التاريخ **   
       React With ▶ To See Admins Commands`,
 	`─═══════ {✯🔧  Admin Commands - اوامر ادارية 🔧✯} ═══════─
    『✤ -move @user => Move User To Your Room Voice | لسحب الشخص الى روومك』
