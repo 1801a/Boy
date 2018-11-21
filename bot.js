@@ -51,6 +51,7 @@ if (message.content.startsWith(prefix + 'help')) {
    『✠ -avatar ==> Your Avatar | صورتك الشخصية』
    『✠ -support => Server Support | سيرفر الدعم』 
    『✠ -invites => Invite Member | كام دخلت اشخاص』
+   『✠ -invite-codes => invite-codes |جميع روابط الدعوات التي قمت بأنشائها』
    『✠ -top => Top Invites Member | أعلى دعوات』
      ─════════════════════════════─
       React With ▶ To See Admins Commands`,
@@ -147,6 +148,42 @@ if (message.content.startsWith(prefix + 'help')) {
 });
 
 
+var userData = {};
+client.on("message", function(message){
+if (message.content.startsWith("-rank")) {
+    if (!userData[message.author.id]) {
+        userData[message.author.id] = {Money:0,Xp:0,Level:0}
+    }
+     var mentionned = message.mentions.users.first();
+
+      var x5bzm;
+      if(mentionned){
+          var x5bzm = mentionned;
+      } else {
+          var x5bzm = message.author;
+
+      }
+
+    
+    var CulLevel = Math.floor(0.25 * Math.sqrt(userData[message.author.id].Xp +1));
+    if (CulLevel > userData[message.author.id].Level) {userData[message.author.id].Level +=CulLevel}
+    let pEmbed = new Discord.RichEmbed()
+    .setColor("Random")
+    .addField("» UserName :", message.author.tag)
+    .addField("» Level :", userData[message.author.id].Level)
+    .addField("» XP :",Math.floor(userData[message.author.id].Xp))
+    message.channel.send(pEmbed);
+}
+if (!userData[message.author.id]) {
+    userData[message.author.id] = {Money:0,Xp:0,Level:0,Like:0}
+    }
+
+userData[message.author.id].Xp+= 0.25;
+userData[message.author.id].Money+= 0.25;
+
+});
+
+
 client.on('message',message =>{
     var prefix = "-";
     if(message.content.startsWith(prefix + 'top')) {
@@ -174,6 +211,36 @@ client.on('message',message =>{
    
     }
   });
+
+ if(message.content.startsWith(prefix + 'invite-codes')) {
+let guild = message.guild
+var codes = [""]
+message.channel.send(":postbox: **لقد قمت بأرسال جميع روابط الدعوات التي قمت بأنشائها في الخاص**")
+guild.fetchInvites()
+.then(invites => {
+invites.forEach(invite => {
+if (invite.inviter === message.author) {
+codes.push(`discord.gg/${invite.code}`)
+}
+})
+}).then(m => {
+if (codes.length < 0) {
+    var embed = new Discord.RichEmbed()
+.setColor("#000000")
+.addField(`Your invite codes in ${message.guild.name}`, `You currently don't have any active invites! Please create an invite and start inviting, then you will be able to see your codes here!`)
+message.author.send({ embed: embed });
+return;
+} else {
+    var embed = new Discord.RichEmbed()
+.setColor("#000000")
+.addField(`Your invite codes in ${message.guild.name}`, `Invite Codes:\n${codes.join("\n")}`)
+message.author.send({ embed: embed });
+return;
+}
+})
+}
+
+}); 
 
     
 client.on('message', message => {
