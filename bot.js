@@ -24,11 +24,28 @@ const sql = require("sqlite");
 ,ti={}  
 ,spee={}; 
 
-client.on('message', message => {
- var prefix = "-";
-if (message.content.startsWith(prefix + 'help')) {
-    let pages = [
-	`─═══════ {✯🌍 Public Commands - اوامر عامة 🌍✯} ═══════─
+client.on("message", message => {
+	var prefix = "-";
+ if (message.content === "-help") {
+  const embed = new Discord.RichEmbed()  
+      .setColor("#000000") 
+      .setDescription(`✠-help1 = {✯🌍 Public Commands - اوامر عامة 🌍✯}
+	 ✠-help2 = {✯🔧  Admin Commands - اوامر ادارية 🔧✯}
+	 ✠-help3 = {✯🎯  Games Commands - اوامر الالعاب 🎯✯}
+	 ✠-help4 = {✯🎯  Music Commands - اوامر الموسيقى 🎯✯}`)
+   message.channel.sendEmbed(embed)
+    
+   }
+   }); 
+  
+  
+
+   client.on("message", message => {
+	var prefix = "-";
+ if (message.content === "-help1") {
+  const embed = new Discord.RichEmbed()  
+      .setColor("#000000") 
+      .setDescription(`─═══════ {✯🌍 Public Commands - اوامر عامة 🌍✯} ═══════─
     『✠ -sug =====> To Suggest | لعمل اقتراح』
    『✠ -id ======> To Show Your ID | ايدي حسابك』
    『✠ -rank ======> To Show Your rank | لفل و اكسبي حسابك في بوت』
@@ -54,9 +71,25 @@ if (message.content.startsWith(prefix + 'help')) {
    『✠ -invites => Invite Member | كام دخلت اشخاص』
    『✠ -top => Top Invites Member | أعلى دعوات』
      ─════════════════════════════─
-      ✠ **-setrooms** ** يسويلك روم صوتي ويقلك كم التاريخ **   
-      React With ▶ To See Admins Commands`,
-	`─═══════ {✯🔧  Admin Commands - اوامر ادارية 🔧✯} ═══════─
+      ✠ **-setrooms** ** يسويلك روم صوتي ويقلك كم التاريخ **	`)
+   message.author.sendEmbed(embed)
+    
+   }
+   }); 
+  
+  client.on('message', message => {
+     if (message.content === ("-help1")) {
+	 message.reply("**تم ارسالك في الخاص** :mailbox_with_mail:")
+    }
+});
+
+
+ client.on("message", message => {
+	var prefix = "-";
+ if (message.content === "-help2") {
+  const embed = new Discord.RichEmbed()  
+      .setColor("#000000") 
+      .setDescription(`─═══════ {✯🔧  Admin Commands - اوامر ادارية 🔧✯} ═══════─
    『✤ -move @user => Move User To Your Room Voice | لسحب الشخص الى روومك』
    『✤ -mvall => Move All To Your Room Voice | لسحب الجميع الي روومك』
    『✤ -role @user <rank> => Give User Rank | لأعطاء رتبة لعضو معين』
@@ -83,9 +116,24 @@ if (message.content.startsWith(prefix + 'help')) {
       ✴ Create Channel ***welcome*** To Enable The Welcome 
       ✴ Create Channel **suggestion** To Enable Command -sug
       ✴ Create Channel **log** TO Enable LOG
-     ─════════════════════════════─
-      React With ▶ To See Games Commands`,
-	`=-=─═══════ {✯🎯  Games Commands - اوامر الالعاب 🎯✯} ═══════─
+     ─════════════════════════════─`)
+   message.author.sendEmbed(embed)
+    
+   }
+   }); 
+  
+  client.on('message', message => {
+     if (message.content === ("-help2")) {
+	 message.reply("**تم ارسالك في الخاص** :mailbox_with_mail:")
+    }
+});
+
+client.on("message", message => {
+	var prefix = "-";
+ if (message.content === "-help3") {
+  const embed = new Discord.RichEmbed()  
+      .setColor("#000000") 
+      .setDescription(`─═══════ {✯🎯  Games Commands - اوامر الالعاب 🎯✯} ═══════─
    『💠 -xo @user => Game XO | لعب اكس او』
    『💠 -rps => Rock & Paper & Scissors | لعبة حجر ورقة مقص』
    『💠 -slots => Game Of Fruits | لعبة الفواكه』
@@ -95,9 +143,24 @@ if (message.content.startsWith(prefix + 'help')) {
    『💠 -لعبة عواصم <= عواصم』
    『💠 -البوت يعطيك نصائح <= هل تعلم』
       قريييب نضيف بعض الالعاب واذا تبون اي لعبة تعالو سيرفر المساعدة
-    ─════════════════════════════─
-      React With ▶ To See Music Commands`,
-	`─═══════ {✯🎯  Music Commands - اوامر الموسيقى 🎯✯} ═══════─
+    ─════════════════════════════─`)
+   message.author.sendEmbed(embed)
+    
+   }
+   }); 
+  
+  client.on('message', message => {
+     if (message.content === ("-help3")) {
+	 message.reply("**تم ارسالك في الخاص** :mailbox_with_mail:")
+    }
+});
+
+client.on("message", message => {
+	var prefix = "-";
+ if (message.content === "-help4") {
+  const embed = new Discord.RichEmbed()  
+      .setColor("#000000") 
+      .setDescription(`─═══════ {✯🎯  Music Commands - اوامر الموسيقى 🎯✯} ═══════─
     『❖ -play => لتشغيل أغنية برآبط أو بأسم』
     『❖ -skip => لتجآوز الأغنية الحآلية』
     『❖ -pause => إيقآف الأغنية مؤقتا』
@@ -106,50 +169,14 @@ if (message.content.startsWith(prefix + 'help')) {
     『❖ -stop => لإخرآج البوت من الروم』
     『❖ -np => لمعرفة الأغنية المشغلة حآليا』
     『❖ -queue => لمعرفة قآئمة التشغيل』
-	Soon And I Will Translate The Command To Englih`]
-	let page = 1;
-
-    let embed = new Discord.RichEmbed()
-    .setColor('RANDOM')
-    .setFooter(`Page ${page} of ${pages.length}`)
-    .setDescription(pages[page-1])
-
-    message.author.sendEmbed(embed).then(msg => {
-
-        msg.react('◀').then( r => {
-            msg.react('▶')
-
-
-        const backwardsFilter = (reaction, user) => reaction.emoji.name === '◀' && user.id === message.author.id;
-        const forwardsFilter = (reaction, user) => reaction.emoji.name === '▶' && user.id === message.author.id;
-
-
-        const backwards = msg.createReactionCollector(backwardsFilter, { time: 20000});
-        const forwards = msg.createReactionCollector(forwardsFilter, { time: 20000});
-
-
-
-        backwards.on('collect', r => {
-            if (page === 1) return;
-            page--;
-            embed.setDescription(pages[page-1]);
-            embed.setFooter(`Page ${page} of ${pages.length}`);
-            msg.edit(embed)
-        })
-        forwards.on('collect', r => {
-            if (page === pages.length) return;
-            page++;
-            embed.setDescription(pages[page-1]);
-            embed.setFooter(`Page ${page} of ${pages.length}`);
-            msg.edit(embed)
-        })
-        })
-    })
-    }
-});
-
-client.on('message', message => {
-     if (message.content === ("-help")) {
+	Soon And I Will Translate The Command To Englih`)
+   message.author.sendEmbed(embed)
+    
+   }
+   }); 
+  
+  client.on('message', message => {
+     if (message.content === ("-help4")) {
 	 message.reply("**تم ارسالك في الخاص** :mailbox_with_mail:")
     }
 });
