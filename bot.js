@@ -80,12 +80,17 @@ client.on("message", message => {
    }
    }); 
   
-  client.on('message', message => {
-     if (message.content === ("-help1")) {
-	 message.reply("**:envelope_with_arrow: تم ارسال في الخاص**")
-    }
-});
 
+client.on("message", message => {
+	var prefix = "-";
+ if (message.content === "-help1") {
+  const embed = new Discord.RichEmbed()  
+      .setColor("#000000") 
+      .setDescription(`:envelope_with_arrow: تم ارسال في الخاص`)
+   message.channel.sendEmbed(embed)
+    
+   }
+   }); 
 
  client.on("message", message => {
 	var prefix = "-";
@@ -125,11 +130,17 @@ client.on("message", message => {
    }
    }); 
   
-  client.on('message', message => {
-     if (message.content === ("-help2")) {
-	 message.reply("**:envelope_with_arrow: تم ارسال في الخاص**")
-    }
-});
+client.on("message", message => {
+	var prefix = "-";
+ if (message.content === "-help2") {
+  const embed = new Discord.RichEmbed()  
+      .setColor("#000000") 
+      .setDescription(`:envelope_with_arrow: تم ارسال في الخاص`)
+   message.channel.sendEmbed(embed)
+    
+   }
+   }); 
+
 
 client.on("message", message => {
 	var prefix = "-";
@@ -152,11 +163,17 @@ client.on("message", message => {
    }
    }); 
   
-  client.on('message', message => {
-     if (message.content === ("-help3")) {
-	 message.reply("**:envelope_with_arrow: تم ارسال في الخاص**")
-    }
-});
+client.on("message", message => {
+	var prefix = "-";
+ if (message.content === "-help3") {
+  const embed = new Discord.RichEmbed()  
+      .setColor("#000000") 
+      .setDescription(`:envelope_with_arrow: تم ارسال في الخاص`)
+   message.channel.sendEmbed(embed)
+    
+   }
+   }); 
+
 
 client.on("message", message => {
 	var prefix = "-";
@@ -178,11 +195,16 @@ client.on("message", message => {
    }
    }); 
   
-  client.on('message', message => {
-     if (message.content === ("-help4")) {
-	 message.reply("**:envelope_with_arrow: تم ارسال في الخاصه**")
-    }
-});  
+client.on("message", message => {
+	var prefix = "-";
+ if (message.content === "-help4") {
+  const embed = new Discord.RichEmbed()  
+      .setColor("#000000") 
+      .setDescription(`:envelope_with_arrow: تم ارسال في الخاص`)
+   message.channel.sendEmbed(embed)
+    
+   }
+   }); 
 
 var userData = {};
 client.on("message", function(message){
