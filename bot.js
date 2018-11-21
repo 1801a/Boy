@@ -114,7 +114,7 @@ if (message.content.startsWith(prefix + 'help')) {
     .setFooter(`Page ${page} of ${pages.length}`)
     .setDescription(pages[page-1])
 
-    message.channel.sendEmbed(embed).then(msg => {
+    message.author.sendEmbed(embed).then(msg => {
 
         msg.react('◀').then( r => {
             msg.react('▶')
@@ -145,6 +145,12 @@ if (message.content.startsWith(prefix + 'help')) {
         })
         })
     })
+    }
+});
+
+client.on('message', message => {
+     if (message.content === ("-help")) {
+	 message.reply("**تم ارسالك في الخاص** :mailbox_with_mail:")
     }
 });
 
