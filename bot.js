@@ -75,7 +75,7 @@ client.on("message", message => {
    『✠ -top => Top Invites Member | أعلى دعوات』
      ─════════════════════════════─
       ✠ **-setrooms** ** يسويلك روم صوتي ويقلك كم التاريخ **	`)
-   message.author.sendEmbed(embed)
+   message.channel.sendEmbed(embed)
     
    }
    }); 
@@ -86,7 +86,7 @@ client.on("message", message => {
  if (message.content === "-help1") {
   const embed = new Discord.RichEmbed()  
       .setColor("#000000") 
-      .setDescription(`:envelope_with_arrow: تم ارسال في الخاص`)
+      .setDescription(`:clap:  شكرا جيدا لاستخدامك للبوت `)
    message.channel.sendEmbed(embed)
     
    }
@@ -125,7 +125,7 @@ client.on("message", message => {
       ✴ Create Channel **suggestion** To Enable Command -sug
       ✴ Create Channel **log** TO Enable LOG
      ─════════════════════════════─`)
-   message.author.sendEmbed(embed)
+   message.channel.sendEmbed(embed)
     
    }
    }); 
@@ -135,7 +135,7 @@ client.on("message", message => {
  if (message.content === "-help2") {
   const embed = new Discord.RichEmbed()  
       .setColor("#000000") 
-      .setDescription(`:envelope_with_arrow: تم ارسال في الخاص`)
+      .setDescription(`:clap:  شكرا جيدا لاستخدامك للبوت `)
    message.channel.sendEmbed(embed)
     
    }
@@ -168,7 +168,7 @@ client.on("message", message => {
  if (message.content === "-help3") {
   const embed = new Discord.RichEmbed()  
       .setColor("#000000") 
-      .setDescription(`:envelope_with_arrow: تم ارسال في الخاص`)
+      .setDescription(`:clap:  شكرا جيدا لاستخدامك للبوت `)
    message.channel.sendEmbed(embed)
     
    }
@@ -190,7 +190,7 @@ client.on("message", message => {
     『❖ -np => لمعرفة الأغنية المشغلة حآليا』
     『❖ -queue => لمعرفة قآئمة التشغيل』
 	Soon And I Will Translate The Command To Englih`)
-   message.author.sendEmbed(embed)
+   message.channel.sendEmbed(embed)
     
    }
    }); 
@@ -200,7 +200,7 @@ client.on("message", message => {
  if (message.content === "-help4") {
   const embed = new Discord.RichEmbed()  
       .setColor("#000000") 
-      .setDescription(`:envelope_with_arrow: تم ارسال في الخاص`)
+      .setDescription(`:clap:  شكرا جيدا لاستخدامك للبوت `)
    message.channel.sendEmbed(embed)
     
    }
