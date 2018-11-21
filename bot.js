@@ -29,10 +29,13 @@ client.on("message", message => {
  if (message.content === "-help") {
   const embed = new Discord.RichEmbed()  
       .setColor("#000000") 
-      .setDescription(`✠-help1 = {✯🌍 Public Commands - اوامر عامة 🌍✯}
-	 ✠-help2 = {✯🔧  Admin Commands - اوامر ادارية 🔧✯}
-	 ✠-help3 = {✯🎯  Games Commands - اوامر الالعاب 🎯✯}
-	 ✠-help4 = {✯🎯  Music Commands - اوامر الموسيقى 🎯✯}`)
+      .setDescription(`✠ -help1 = {✯🌍 Public Commands - اوامر عامة 🌍✯}
+
+	 ✠ -help2 = {✯🔧  Admin Commands - اوامر ادارية 🔧✯}
+
+	 ✠ -help3 = {✯🎯  Games Commands - اوامر الالعاب 🎯✯}
+
+	 ✠ -help4 = {✯🎯  Music Commands - اوامر الموسيقى 🎯✯}`)
    message.channel.sendEmbed(embed)
     
    }
@@ -2258,7 +2261,7 @@ msg.delete();
 client.on('message', message => {
 	var prefix = "-";
    if(!message.channel.guild) return;
-if(message.content.startsWith(prefix + 'مسح')) {
+if(message.content.startsWith('مسح')) {
 if(!message.channel.guild) return message.channel.send('**This Command is Just For Servers**').then(m => m.delete(5000));
 if(!message.member.hasPermission('MANAGE_MESSAGES')) return      message.channel.send('**You Do not have permission** `MANAGE_MESSAGES`' );
 let args = message.content.split(" ").join(" ").slice(2 + prefix.length);
